@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A curated radar for remote careers accessible to professionals in Brazil, LATAM and worldwide.">
+  <title>Purpose-Driven Careers Radar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">REMOTE CAREERS · BRAZIL FIRST · LATAM + WORLDWIDE</p>
+      <h1>Find work that moves<br><span>people and the planet forward.</span></h1>
+      <p class="intro">A curated radar for remote opportunities in People, Learning, Social Impact, Animal Welfare, Sustainability and Operations.</p>
+      <div class="stats" aria-live="polite">
+        <div><strong id="job-count">—</strong><span>eligible opportunities</span></div>
+        <div><strong id="updated-at">—</strong><span>last radar update</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="notice">
+      <strong>Eligibility matters.</strong> We prioritize roles explicitly open to candidates in Brazil, LATAM or worldwide. “Remote” alone is not treated as proof of geographic eligibility. Always confirm details in the original posting.
+    </section>
+
+    <section class="controls" aria-label="Job filters">
+      <label class="search-label">Search roles, skills or companies
+        <input id="search" type="search" placeholder="e.g. instructional designer, recruiter, climate..." autocomplete="off">
+      </label>
+      <label>Career area
+        <select id="category"><option value="">All career areas</option></select>
+      </label>
+      <label>Eligibility
+        <select id="eligibility">
+          <option value="">All eligible locations</option>
+          <option value="Brazil">Brazil</option>
+          <option value="LATAM">LATAM</option>
+          <option value="Worldwide">Worldwide</option>
+        </select>
+      </label>
+      <label>Source
+        <select id="source"><option value="">All sources</option></select>
+      </label>
+    </section>
+
+    <div class="results-heading">
+      <h2>Open opportunities</h2>
+      <span id="result-count" class="muted"></span>
+    </div>
+    <section id="jobs" class="jobs-grid" aria-live="polite">
+      <p class="empty">Loading opportunities…</p>
+    </section>
+    <p class="disclaimer">Listings are collected from public sources. Availability can change at any time. We do not guarantee that a role is still open or that an employer will accept a specific applicant.</p>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Purpose-Driven Careers Radar</span>
+      <a href="https://github.com/" target="_blank" rel="noopener">Built in the open with GitHub</a>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
