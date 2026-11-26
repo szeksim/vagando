@@ -170,13 +170,21 @@ def identificar_elegibilidade(texto: str) -> list[str]:
 def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publicado,
                tipo_contrato=None, remoto=True):
     if not titulo or not url or not remoto:
+        print(f"[DESCARTADA: dados/remoto] {titulo}")
         return None
-    elegibilidade = identificar_elegibilidade(localidade + " " + descricao[:1200])
+
+    elegibilidade = identificar_eligibilidade(
+        localidade + " " + descricao[:1200]
+    )
     if not elegibilidade:
+        print(f"[DESCARTADA: elegibilidade] {titulo} | Local: {localidade}")
         return None
+
     categoria = classificar(titulo, descricao, tags)
     if not categoria:
+        print(f"[DESCARTADA: categoria] {titulo} | Tags: {tags[:5]}")
         return None
+
     identificador = re.sub(r"[^a-z0-9]+", "-", f"{fonte}-{empresa}-{titulo}".lower()).strip("-")[:120]
     return {
         "id": identificador, "title": titulo.strip(),
