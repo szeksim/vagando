@@ -108,26 +108,41 @@ def limpar_html(valor: str) -> str:
 
 
 def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
-    titulo = titulo.lower()
-    tags_texto = " ".join(tags).lower()
+    titulo = (titulo or "").lower()
+    tags_texto = " ".join(tags or []).lower()
+
+    # Termos genéricos não devem classificar uma vaga sozinhos.
+    termos_genericos = {
+        "enablement",
+        "trainer",
+        "training"
+    }
 
     resultados = {}
 
     for categoria, palavras in CATEGORIAS.items():
+        # O título é o principal indicador da área profissional.
         pontos_titulo = sum(
-            3 for palavra in palavras if palavra in titulo
+            3 for palavra in palavras
+            if palavra in titulo and palavra not in termos_genericos
         )
 
+        # Tags servem apenas como evidência complementar.
         pontos_tags = sum(
-            1 for palavra in palavras if palavra in tags_texto
+            1 for palavra in palavras
+            if palavra in tags_texto
         )
+
+        # Sem evidência no título, não classificamos.
+        if pontos_titulo == 0:
+            continue
 
         resultados[categoria] = pontos_titulo + pontos_tags
 
-    maior_pontuacao = max(resultados.values(), default=0)
-
-    if maior_pontuacao < 3:
+    if not resultados:
         return None
+
+    maior_pontuacao = max(resultados.values())
 
     melhores = [
         categoria
@@ -135,11 +150,11 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
         if pontos == maior_pontuacao
     ]
 
+    # Em caso de empate, não forçamos uma classificação.
     if len(melhores) != 1:
         return None
 
     return melhores[0]
-
 
 def identificar_elegibilidade(texto: str) -> list[str]:
     texto = (texto or "").lower()
