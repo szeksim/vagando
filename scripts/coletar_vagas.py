@@ -174,12 +174,19 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
 def identificar_localizacao(texto: str) -> list[str]:
     texto = (texto or "").lower()
     elegibilidade = []
+
     if re.search(r"\b(brazil|brasil)\b", texto):
         elegibilidade.append("Brasil")
+
     if re.search(r"\b(latin america|latam|south america|central america)\b", texto):
         elegibilidade.append("América Latina")
+
     if re.search(r"\b(worldwide|work from anywhere|anywhere in the world|global remote|globally)\b", texto):
         elegibilidade.append("Mundo")
+
+    if not elegibilidade:
+        elegibilidade.append("A confirmar")
+
     return elegibilidade
 
 def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publicado,
