@@ -134,7 +134,7 @@ def main():
         chave = (vaga["company"].lower(), vaga["title"].lower())
         unicas.setdefault(chave, vaga)
 
-    vagas = sorted(unicas.values(), key=lambda item: item.get("date_posted") or "", reverse=True)
+    vagas = sorted(unicas.values(), key=lambda item: str(item.get("date_posted") or ""), reverse=True)
     resultado = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "total": len(vagas), "source_errors": erros, "jobs": vagas
