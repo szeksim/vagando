@@ -1,6 +1,9 @@
 {
-  "updated_at": "2026-11-26T02:05:48.414786+00:00",
+  "updated_at": "2026-11-26T02:10:59.251907+00:00",
   "total": 0,
-  "source_errors": [],
+  "source_errors": [
+    "Remotive: NameError: name 'identificar_eligibilidade' is not defined",
+    "Arbeitnow: NameError: name 'identificar_eligibilidade' is not defined"
+  ],
   "jobs": []
 }
