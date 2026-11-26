@@ -28,7 +28,7 @@ CATEGORIAS = {
         "corporate learning", "corporate training",
         "training manager", "training specialist",
         "trainer", "enablement",
-        "customer enablement", "employee enablement",
+        "employee enablement",
         "sales training", "learning consultant",
         "learning experience designer", "curriculum development",
         "learning operations", "aprendizagem", "treinamento",
@@ -51,21 +51,22 @@ CATEGORIAS = {
 
     "Non-profit, Social Impact & Sustainability": [
         "nonprofit", "non-profit", "nonprofit organization",
-        "nonprofit management", "social impact", "humanitarian",
-        "international development", "animal welfare",
-        "animal rights", "animal advocacy", "animal protection",
-        "animal shelter", "animal rescue", "animal care",
-        "wildlife", "wildlife protection", "wildlife conservation",
-        "conservation", "climate action", "climate change",
-        "sustainability", "environment", "environmental",
+        "nonprofit management", "social impact",
+        "humanitarian", "international development",
+        "animal welfare", "animal rights", "animal advocacy",
+        "animal protection", "animal shelter", "animal rescue",
+        "animal care", "wildlife protection", "wildlife conservation",
+        "climate action", "climate change",
         "environmental protection", "environmental conservation",
-        "biodiversity", "biodiversity conservation",
+        "biodiversity conservation",
+        "environmental sustainability",
+        "sustainable development",
         "bem-estar animal", "proteção animal", "direitos dos animais",
         "resgate animal", "proteção da fauna",
-        "meio ambiente", "sustentabilidade",
-        "conservação", "conservação ambiental",
-        "mudanças climáticas", "impacto social",
-        "terceiro setor", "desenvolvimento internacional",
+        "meio ambiente", "sustentabilidade ambiental",
+        "conservação ambiental", "mudanças climáticas",
+        "impacto social", "terceiro setor",
+        "desenvolvimento internacional",
         "organização sem fins lucrativos"
     ],
 
@@ -126,7 +127,6 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
     titulo = (titulo or "").lower()
     tags_texto = " ".join(tags or []).lower()
 
-    # Termos genéricos não devem classificar uma vaga sozinhos.
     termos_genericos = {
         "enablement",
         "trainer",
@@ -136,21 +136,22 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
     resultados = {}
 
     for categoria, palavras in CATEGORIAS.items():
-        # O título é o principal indicador da área profissional.
-        pontos_titulo = sum(
-            3 for palavra in palavras
-            if palavra in titulo and palavra not in termos_genericos
-        )
+        correspondencias = [
+            palavra for palavra in palavras
+            if palavra not in termos_genericos
+            and re.search(r"(?<!\w)" + re.escape(palavra) + r"(?!\w)", titulo)
+        ]
 
-        # Tags servem apenas como evidência complementar.
+        if not correspondencias:
+            continue
+
+        pontos_titulo = len(correspondencias) * 3
+
         pontos_tags = sum(
             1 for palavra in palavras
-            if palavra in tags_texto
+            if palavra not in termos_genericos
+            and re.search(r"(?<!\w)" + re.escape(palavra) + r"(?!\w)", tags_texto)
         )
-
-        # Sem evidência no título, não classificamos.
-        if pontos_titulo == 0:
-            continue
 
         resultados[categoria] = pontos_titulo + pontos_tags
 
@@ -165,7 +166,6 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
         if pontos == maior_pontuacao
     ]
 
-    # Em caso de empate, não forçamos uma classificação.
     if len(melhores) != 1:
         return None
 
