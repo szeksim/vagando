@@ -1,76 +1,74 @@
-# Purpose-Driven Careers Radar
+# Vagando — Radar de oportunidades remotas
 
-A public, lightweight job discovery radar focused on remote opportunities accessible to professionals based in Brazil, with additional LATAM and worldwide opportunities.
+**Vagando** é um radar de oportunidades profissionais remotas, pensado primeiro para pessoas residentes no Brasil e também aberto a oportunidades elegíveis para profissionais da América Latina e de qualquer lugar do mundo.
 
-## MVP scope
+O nome brinca com “vaga” e com a experiência de ficar vagando por vários job boards até encontrar uma oportunidade que realmente aceite candidatos no Brasil.
 
-Five initial categories:
+## Categorias do radar
 
-1. HR & Talent Acquisition
-2. Learning & Development
-3. Non-profit, Social Impact & Sustainability
-4. Customer Experience & Operations
-5. Project & Business Operations
+1. RH & Aquisição de Talentos
+2. Aprendizagem & Desenvolvimento (L&D)
+3. Terceiro Setor, Impacto Social & Sustentabilidade
+4. Experiência do Cliente & Operações
+5. Projetos & Operações de Negócios
 
-The first version uses public job-board APIs, Python classification, JSON storage, GitHub Actions for daily collection, and GitHub Pages for the public interface.
+A categoria de impacto inclui oportunidades ligadas a direitos humanos, desenvolvimento internacional, bem-estar e proteção animal, conservação da vida silvestre, meio ambiente, clima e sustentabilidade.
 
-## Important eligibility rule
+## Regra de elegibilidade geográfica
 
-A job is included only when its location/eligibility text explicitly indicates Brazil, Latin America/LATAM, or worldwide/global/anywhere eligibility. A generic "Remote" label is **not** enough. This reduces false positives, but automated text checks are not a guarantee: always verify the original posting before applying.
+O radar prioriza vagas que indiquem explicitamente que aceitam candidatos no Brasil, na América Latina ou em qualquer lugar do mundo. Uma vaga marcada apenas como “remota” **não** é considerada elegível automaticamente.
 
-## Set up the public repository
+A classificação automatizada é uma triagem inicial, não uma garantia. Antes de se candidatar, confira a publicação original, o país de contratação, as exigências de autorização de trabalho, fuso horário e modalidade contratual.
 
-1. Create a **public** GitHub repository named `purpose-driven-careers-radar`.
-2. Download and unzip this starter project.
-3. Upload all files and folders to the repository's root (keep `.github/workflows/`).
-4. In GitHub, open **Settings → Pages** and set the build source to **GitHub Actions**.
-5. Open **Actions** and enable workflows if GitHub asks.
-6. Run **Daily job radar update** manually once from the Actions tab.
-7. When the deployment workflow finishes, your site will be available at:
-   `https://YOUR-GITHUB-USERNAME.github.io/purpose-driven-careers-radar/`
+## Como publicar no GitHub
 
-## Local preview
+1. Crie um repositório **público** chamado `vagando` (ou mantenha `purpose-driven-careers-radar`, se preferir preservar o nome técnico anterior).
+2. Descompacte este projeto e envie todos os arquivos para a raiz do repositório, mantendo a pasta `.github`.
+3. No GitHub, abra **Settings → Pages** e selecione **GitHub Actions** como fonte de publicação.
+4. Abra **Actions** e habilite os workflows, caso o GitHub solicite.
+5. Execute manualmente o workflow **Atualização diária do Vagando** uma vez.
+6. Quando a publicação terminar, o site estará disponível em `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`.
 
-Requires Python 3.10+.
+## Visualizar localmente
+
+É necessário Python 3.10 ou superior.
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Acesse `http://localhost:8000`.
 
-To collect jobs locally:
+Para executar a coleta manualmente:
 
 ```bash
-python scripts/collect_jobs.py
+python scripts/coletar_vagas.py
 ```
 
-The collector uses only public endpoints and Python's standard library. No API key is required for the initial sources.
+## Fontes iniciais
 
-## Sources in the MVP
+- API pública de vagas remotas da Remotive
+- API pública de vagas da Arbeitnow
 
-- Remotive public remote-jobs API
-- Arbeitnow public jobs API
+Começamos com duas fontes para validar a coleta e a qualidade dos dados. Novas fontes — incluindo organizações de proteção animal, meio ambiente e terceiro setor — serão adicionadas depois de verificarmos seus métodos de acesso, campos de localização e termos de uso. Não faça scraping de sites que proíbam essa prática.
 
-The MVP intentionally starts with two sources. Add career sites and nonprofit/impact job boards only after their access method, terms, and location fields have been checked. Do not scrape sites that prohibit it.
+## Atualização automática
 
-## Schedule
+O GitHub Actions está programado para executar diariamente às 10h UTC (7h no horário de Brasília, UTC−3). O GitHub pode atrasar execuções agendadas em períodos de alta demanda; portanto, o horário não é garantido ao minuto.
 
-GitHub Actions is scheduled for 10:00 UTC (07:00 in Curitiba/Brasília, UTC−3). GitHub may delay scheduled workflows during periods of high load; the time is not guaranteed to be exact.
+## Estrutura dos dados
 
-## Data fields
+Cada oportunidade pode conter: cargo, organização, categoria, elegibilidade geográfica, localidade, fonte, link original, data de publicação, data de descoberta, modalidade contratual (quando disponível) e descrição resumida.
 
-Each job includes title, company, category, location eligibility, source, original URL, date found, date posted (when available), employment type (when available), and a short description.
+## Próximas melhorias
 
-## Roadmap
+- [ ] Adicionar páginas de carreira de organizações selecionadas
+- [ ] Incluir mais fontes de terceiro setor, desenvolvimento internacional e impacto
+- [ ] Ampliar fontes de bem-estar animal, conservação e meio ambiente
+- [ ] Melhorar a validação geográfica e criar revisão manual de casos ambíguos
+- [ ] Adicionar filtros de senioridade e modalidade de contratação
+- [ ] Criar testes e monitoramento de fontes indisponíveis
 
-- [ ] Add curated organization career pages (including animal welfare and environmental organizations)
-- [ ] Add more nonprofit and international-development job boards
-- [ ] Improve eligibility evidence and manual review workflow
-- [ ] Add salary and contract-type filters when reliable data is available
-- [ ] Add saved searches or email digests (optional)
-- [ ] Add tests and monitoring for broken sources
+## Uso responsável
 
-## Responsible use
-
-This project links to original job postings and does not claim affiliation with employers or job boards. Check each employer's current hiring location, work authorization, time-zone, language, and contract requirements before applying.
+O Vagando direciona para as publicações originais e não é afiliado a empresas, organizações ou job boards listados. As vagas podem ser encerradas ou alteradas sem aviso.

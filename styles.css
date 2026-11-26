@@ -1,12 +1,6 @@
 :root {
-  --ink: #202b27;
-  --muted: #68756f;
-  --paper: #f6f7f3;
-  --card: #ffffff;
-  --line: #e2e8e2;
-  --green: #236b50;
-  --green-dark: #174b39;
-  --lime: #d9ef9a;
+  --ink: #202b27; --muted: #68756f; --paper: #f6f7f3; --card: #fff;
+  --line: #e2e8e2; --green: #236b50; --green-dark: #174b39; --lime: #d9ef9a;
 }
 * { box-sizing: border-box; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
@@ -15,7 +9,7 @@ body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inte
 .eyebrow { color: var(--lime); font-size: .72rem; font-weight: 800; letter-spacing: .14em; }
 h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.02; letter-spacing: -.055em; margin: 22px 0; }
 h1 span { color: var(--lime); }
-.intro { max-width: 650px; color: #dce8e1; font-size: 1.08rem; line-height: 1.65; }
+.intro { max-width: 690px; color: #dce8e1; font-size: 1.08rem; line-height: 1.65; }
 .stats { display: flex; gap: 44px; margin-top: 34px; }
 .stats div { display: grid; gap: 4px; }
 .stats strong { font-size: 1.6rem; }
@@ -46,15 +40,5 @@ h2 { font-size: 1.45rem; letter-spacing: -.03em; }
 footer { border-top: 1px solid var(--line); padding: 22px 0; color: var(--muted); font-size: .8rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 12px; }
 footer a { color: var(--green); }
-@media (max-width: 760px) {
-  .controls { grid-template-columns: 1fr 1fr; }
-  .search-label { grid-column: 1 / -1; }
-  .jobs-grid { grid-template-columns: 1fr; }
-  .hero { padding-top: 46px; }
-}
-@media (max-width: 440px) {
-  .controls { grid-template-columns: 1fr; }
-  .search-label { grid-column: auto; }
-  .stats { gap: 24px; }
-  .footer-inner { flex-direction: column; }
-}
+@media (max-width: 760px) { .controls { grid-template-columns: 1fr 1fr; } .search-label { grid-column: 1 / -1; } .jobs-grid { grid-template-columns: 1fr; } .hero { padding-top: 46px; } }
+@media (max-width: 440px) { .controls { grid-template-columns: 1fr; } .search-label { grid-column: auto; } .stats { gap: 24px; } .footer-inner { flex-direction: column; } }

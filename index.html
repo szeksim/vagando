@@ -1,64 +1,65 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A curated radar for remote careers accessible to professionals in Brazil, LATAM and worldwide.">
-  <title>Purpose-Driven Careers Radar</title>
+  <meta name="description" content="Vagando: radar de oportunidades remotas para quem está no Brasil, na América Latina e no mundo.">
+  <meta name="theme-color" content="#173e32">
+  <title>Vagando — Radar de oportunidades remotas</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">REMOTE CAREERS · BRAZIL FIRST · LATAM + WORLDWIDE</p>
-      <h1>Find work that moves<br><span>people and the planet forward.</span></h1>
-      <p class="intro">A curated radar for remote opportunities in People, Learning, Social Impact, Animal Welfare, Sustainability and Operations.</p>
+      <p class="eyebrow">VAGANDO POR AÍ, MAS NÃO À TOA.</p>
+      <h1>Menos tempo procurando.<br><span>Mais tempo encontrando.</span></h1>
+      <p class="intro">Um radar de oportunidades remotas em RH, Aprendizagem, Impacto Social, Proteção Animal, Meio Ambiente e Operações — com foco em quem mora no Brasil.</p>
       <div class="stats" aria-live="polite">
-        <div><strong id="job-count">—</strong><span>eligible opportunities</span></div>
-        <div><strong id="updated-at">—</strong><span>last radar update</span></div>
+        <div><strong id="job-count">—</strong><span>oportunidades encontradas</span></div>
+        <div><strong id="updated-at">—</strong><span>última atualização</span></div>
       </div>
     </div>
   </header>
 
   <main class="container">
     <section class="notice">
-      <strong>Eligibility matters.</strong> We prioritize roles explicitly open to candidates in Brazil, LATAM or worldwide. “Remote” alone is not treated as proof of geographic eligibility. Always confirm details in the original posting.
+      <strong>Remoto de verdade importa.</strong> Priorizamos oportunidades que indiquem explicitamente aceitar pessoas no Brasil, na América Latina ou em qualquer lugar do mundo. “Remoto” sem informação geográfica não é suficiente. Confirme sempre os requisitos na publicação original.
     </section>
 
-    <section class="controls" aria-label="Job filters">
-      <label class="search-label">Search roles, skills or companies
-        <input id="search" type="search" placeholder="e.g. instructional designer, recruiter, climate..." autocomplete="off">
+    <section class="controls" aria-label="Filtros de oportunidades">
+      <label class="search-label">Buscar cargo, habilidade ou organização
+        <input id="search" type="search" placeholder="Ex.: designer instrucional, recrutamento, clima..." autocomplete="off">
       </label>
-      <label>Career area
-        <select id="category"><option value="">All career areas</option></select>
+      <label>Área profissional
+        <select id="category"><option value="">Todas as áreas</option></select>
       </label>
-      <label>Eligibility
+      <label>Elegibilidade
         <select id="eligibility">
-          <option value="">All eligible locations</option>
-          <option value="Brazil">Brazil</option>
-          <option value="LATAM">LATAM</option>
-          <option value="Worldwide">Worldwide</option>
+          <option value="">Todas as localidades elegíveis</option>
+          <option value="Brasil">Brasil</option>
+          <option value="América Latina">América Latina</option>
+          <option value="Mundo">Mundo</option>
         </select>
       </label>
-      <label>Source
-        <select id="source"><option value="">All sources</option></select>
+      <label>Fonte
+        <select id="source"><option value="">Todas as fontes</option></select>
       </label>
     </section>
 
     <div class="results-heading">
-      <h2>Open opportunities</h2>
+      <h2>Oportunidades abertas</h2>
       <span id="result-count" class="muted"></span>
     </div>
     <section id="jobs" class="jobs-grid" aria-live="polite">
-      <p class="empty">Loading opportunities…</p>
+      <p class="empty">Carregando oportunidades…</p>
     </section>
-    <p class="disclaimer">Listings are collected from public sources. Availability can change at any time. We do not guarantee that a role is still open or that an employer will accept a specific applicant.</p>
+    <p class="disclaimer">As oportunidades são coletadas de fontes públicas. A disponibilidade pode mudar a qualquer momento. O Vagando não garante que uma vaga continue aberta nem que uma organização aceite uma candidatura específica.</p>
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <span>Purpose-Driven Careers Radar</span>
-      <a href="https://github.com/" target="_blank" rel="noopener">Built in the open with GitHub</a>
+      <span>Vagando · Radar de oportunidades remotas</span>
+      <a id="repo-link" href="https://github.com/" target="_blank" rel="noopener">Projeto aberto no GitHub</a>
     </div>
   </footer>
   <script src="app.js"></script>

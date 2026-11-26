@@ -1,0 +1,26 @@
+{
+  "fontes": [
+    {
+      "nome": "Remotive",
+      "tipo": "API pública",
+      "ativa": true
+    },
+    {
+      "nome": "Arbeitnow",
+      "tipo": "API pública",
+      "ativa": true
+    }
+  ],
+  "politica_de_elegibilidade": {
+    "sinais_aceitos": [
+      "Brazil",
+      "Brasil",
+      "Latin America",
+      "LATAM",
+      "Worldwide",
+      "Global",
+      "Anywhere"
+    ],
+    "regra": "Não considerar elegível uma vaga que informe apenas Remote/Remoto sem delimitação geográfica."
+  }
+}
