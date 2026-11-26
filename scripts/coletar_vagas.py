@@ -70,15 +70,30 @@ CATEGORIAS = {
     ],
 
     "Customer Experience & Operations": [
-        "customer experience", "customer success",
-        "customer support", "customer education",
-        "customer operations", "customer care",
-        "client success", "client experience",
-        "cx operations", "support operations",
-        "service operations", "knowledge management",
+        "customer experience", "customer experience manager",
+        "head of customer experience", "customer success",
+        "customer success manager", "head of customer success",
+        "customer support", "customer support manager",
+        "customer service", "customer service manager",
+        "head of support", "head of customer support",
+        "support manager", "support lead",
+        "support team lead", "support specialist",
+        "support operations", "customer operations",
+        "customer operations manager",
+        "customer care", "client success",
+        "client success manager", "client experience",
+        "client services", "client services manager",
+        "cx operations", "cx manager",
+        "service operations", "service delivery manager",
+        "knowledge management", "knowledge manager",
+        "customer education", "customer onboarding",
+        "customer enablement", "customer advocacy",
         "experiência do cliente", "sucesso do cliente",
         "suporte ao cliente", "atendimento ao cliente",
-        "operações de atendimento", "gestão de conhecimento"
+        "gerente de suporte", "gerente de atendimento",
+        "coordenação de atendimento", "gestão de suporte",
+        "operações de atendimento", "gestão de conhecimento",
+        "experiência do consumidor", "relacionamento com clientes"
     ],
 
     "Project & Business Operations": [
