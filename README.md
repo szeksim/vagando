@@ -1,6 +1,6 @@
 # Vagando
 
-**Vagando** é um radar de oportunidades profissionais remotas, pensado primeiro para pessoas residentes no Brasil e também aberto a oportunidades elegíveis para profissionais da América Latina e de qualquer lugar do mundo.
+**Vagando** é um radar de oportunidades profissionais remotas, pensado primeiro para pessoas residentes no Brasil e também aberto a oportunidades elegíveis para profissionais da América Latina e de qualquer lugar do mundo. Menos tempo procurando, mais tempo encontrando.
 
 ## Categorias do radar
 
