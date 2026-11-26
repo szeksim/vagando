@@ -1,9 +1,10 @@
 const CATEGORIAS = [
-  "RH & Aquisição de Talentos",
-  "Aprendizagem & Desenvolvimento",
-  "Terceiro Setor, Impacto Social & Sustentabilidade",
-  "Experiência do Cliente & Operações",
-  "Projetos & Operações de Negócios"
+  "HR & Talent Acquisition",
+  "Learning & Development",
+  "Quality Assurance",
+  "Non-profit, Social Impact & Sustainability",
+  "Customer Experience & Operations",
+  "Project & Business Operations"
 ];
 
 const state = { jobs: [], query: "", category: "", eligibility: "", source: "" };
