@@ -6,9 +6,10 @@
 
 1. HR & Talent Acquisition
 2. Learning & Development
-3. Non-profit, Social Impact & Sustainability
-4. Customer Experience & Operations
-5. Project & Business Operations
+3. Quality Assurance
+4. Non-profit, Social Impact & Sustainability
+5. Customer Experience & Operations
+6. Project & Business Operations
 
 A categoria de impacto inclui oportunidades ligadas a direitos humanos, desenvolvimento internacional, bem-estar e proteção animal, conservação da vida silvestre, meio ambiente, clima e sustentabilidade.
 
