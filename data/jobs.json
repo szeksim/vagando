@@ -1,6 +1,173 @@
 {
-  "updated_at": null,
-  "total": 0,
+  "updated_at": "2026-11-26T00:55:36.330817+00:00",
+  "total": 6,
   "source_errors": [],
-  "jobs": []
+  "jobs": [
+    {
+      "id": "remotive-coalition-technologies-remote-office-assistant",
+      "title": "Remote Office Assistant",
+      "company": "Coalition Technologies",
+      "category": "Quality Assurance",
+      "eligibility": [
+        "Mundo"
+      ],
+      "location": "Worldwide",
+      "employment_type": "full_time",
+      "source": "Remotive",
+      "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
+      "date_posted": "2026-11-11T20:17:48",
+      "date_found": "2026-11-26T00:55:35.935563+00:00",
+      "description": "Coalition Technologies is seeking a reliable, detail-oriented, and highly organized Remote Office Assistant to support administrative, bookkeeping, billing, reporting, data entry, and internal operations tasks. This role is ideal for someone with strong communication skills, discretion, attention to detail, and a willingness to learn and grow within a fast-paced remote work environment. As an Office Assistant, you will help support daily administrative operations, assist with entry-level bookkeeping, organize client documents, support internal reporting, and help maintain accurate company records. This position offers strong growth potential for the right candidate, including opportunities for advancement within the Accounting team or other departments. We are looking for talented and diligent candidates who perform well on our skills assessments. Strong skills test performance may be considered even if a candidate does not meet every preferred experience or educational background requirement. Why Join Coalition Technologies? Coalition Technologies is committed to delivering high-quality work for our clients while providing our team with a fun, thriving, innovative, and growth-focu",
+      "tags": [
+        "CSS",
+        "excel",
+        "frontend",
+        "git",
+        "html",
+        "illustrator",
+        "magento",
+        "photoshop",
+        "php",
+        "shopify",
+        "wordpress",
+        "MySQL",
+        "startup",
+        "responsive",
+        "themes"
+      ]
+    },
+    {
+      "id": "remotive-credit-wellness-llc-inside-sales-contractor",
+      "title": "Inside Sales Contractor",
+      "company": "Credit Wellness, LLC",
+      "category": "Learning & Development",
+      "eligibility": [
+        "Mundo"
+      ],
+      "location": "Worldwide",
+      "employment_type": "full_time",
+      "source": "Remotive",
+      "url": "https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540",
+      "date_posted": "2026-11-08T21:47:58",
+      "date_found": "2026-11-26T00:55:35.937045+00:00",
+      "description": "About Us We are a financial services start up focusing on helping to improve consumer credit profiles. We are currently seeking KPI driven sales representatives looking to earn up to 45K in their first year while working remotely. We offer comprehensive training and continuous sales coaching to help you meet your financial goals. During our training period we offer a guaranteed training stipend while our trainees are acclimating to the position (*see weekly pay below). If you are a seasoned sales professional looking for the autonomy of a remote position combined with great compensation, we want to hear from you! Compensation Structure This role is 100% commission-based , which means your earning potential is unlimited. In addition, we regularly offer competitive performance-based bonuses to reward hard work and results. Training Period (Weeks 1–4) We invest in your success and want to make sure you’re supported as you get up to speed: Week 1: Commission-only (a chance to start earning right away while learning the ropes). Weeks 2–4: Guaranteed training stipend of $500 USD total – or your commission if it’s higher. You’ll always receive whichever amount benefits you most. Week 0: U",
+      "tags": [
+        "CRM",
+        "google sheets",
+        "financial services",
+        "Inside Sales"
+      ]
+    },
+    {
+      "id": "remotive-unio-digital-tier-iii-service-desk-engineer",
+      "title": "Tier III Service Desk Engineer",
+      "company": "Unio Digital",
+      "category": "Learning & Development",
+      "eligibility": [
+        "Mundo"
+      ],
+      "location": "Worldwide",
+      "employment_type": "full_time",
+      "source": "Remotive",
+      "url": "https://remotive.com/remote-jobs/information-technology/tier-iii-service-desk-engineer-2091045",
+      "date_posted": "2026-11-07T01:10:55",
+      "date_found": "2026-11-26T00:55:35.937289+00:00",
+      "description": "Unió Digital is an Arizona-based managed service provider (MSP) delivering Managed IT Services, Low Voltage Cabling, Access Control, Video Surveillance, and Intrusion Services. We believe technology should be intuitive, not intimidating. We are looking for an experienced Tier 3 Service Desk Technician with exceptional problem-solving skills. You will serve as the escalation point within the team, resolving complex technical issues while also leading client onboarding and project initiatives. You are expected to be involved in direct end-user support when required. If you have a passion for ensuring top-quality user support and thrive in a collaborative environment, this role is for you. Duties · Lead and support our helpdesk environment for managed service clients · Coordinate and manage client projects, acting as a bridge between the technical team and the client to ensure project success · Provide above and beyond support to our clients and respond to queries for technical assistance in person, via phone, or electronically as required · Provide training and support to clients during the onboarding process to ensure they understand how to effectively use their new IT systems and s",
+      "tags": [
+        "azure",
+        "cisco",
+        "security",
+        "video",
+        "documentation",
+        "hardware",
+        "helpdesk",
+        "onboarding",
+        "MSP",
+        "ticketing",
+        "Microsoft 365",
+        "IT systems"
+      ]
+    },
+    {
+      "id": "remotive-coalition-technologies-freelance-copywriter",
+      "title": "Freelance Copywriter",
+      "company": "Coalition Technologies",
+      "category": "Learning & Development",
+      "eligibility": [
+        "Mundo"
+      ],
+      "location": "Worldwide",
+      "employment_type": "freelance",
+      "source": "Remotive",
+      "url": "https://remotive.com/remote-jobs/writing/freelance-copywriter-1749306",
+      "date_posted": "2026-11-02T20:01:00",
+      "date_found": "2026-11-26T00:55:35.938050+00:00",
+      "description": "CT Marketing Agency is seeking skilled Freelance Copywriters to write high-quality, SEO-driven content for eCommerce and lead generation websites. This is a freelance, project-based writing role. The ideal candidate has excellent English writing skills, strong research ability, and experience writing content that follows detailed, client-specific guidelines. Projects commonly include category pages, product descriptions, blog posts, SEO landing pages, and website copy. About the Role Our client base is constantly evolving, and writers may create content across a wide range of industries, including: Fashion, including mass-market and luxury brands Skincare and beauty Tech and software Finance and investing Law, including family law, divorce, and product liability Education Home improvement Automobiles and motorcycles Health and wellness Medical and clinical fields Digital marketing SEO, PR, advertising, and marketing Writers with experience in highly specialized industries such as tech, finance, law, health, medical, SEO, PR, advertising, or marketing are strongly encouraged to apply. Responsibilities Write clear, engaging, SEO-friendly content for eCommerce and lead generation webs",
+      "tags": [
+        "accounting",
+        "excel",
+        "research",
+        "data analysis",
+        "bookkeeping",
+        "google sheets",
+        "quickbooks",
+        "data entry",
+        "insurance",
+        "G Suite"
+      ]
+    },
+    {
+      "id": "remotive-fluence-international-inc-full-stack-developer",
+      "title": "Full-Stack Developer",
+      "company": "Fluence International, Inc.",
+      "category": "Learning & Development",
+      "eligibility": [
+        "Mundo"
+      ],
+      "location": "Worldwide",
+      "employment_type": "contract",
+      "source": "Remotive",
+      "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
+      "date_posted": "2026-10-29T18:22:41",
+      "date_found": "2026-11-26T00:55:35.938550+00:00",
+      "description": "We’re looking for a pragmatic, security-minded Full-Stack Developer to help build and scale Fluence’s B2B products used by clinicians, researchers, and organizations in psychedelic-assisted therapy and mental health. You’ll work closely with and report to our Senior AI & Design Lead to turn product requirements into robust, secure, and well-documented applications, as well as maintain existing ones. What you’ll do Build and maintain full-stack web applications using React and Next.js . Architect reliable, performant backends and APIs; familiarity with AWS (Lambda, ECS/Fargate, API Gateway, RDS/DynamoDB, S3, CloudFront, Cognito, etc.) is important. AWS Bedrock and AWS CloudTrail experience is a plus. Implement secure authentication, authorization, and role-based access for clinician, admin, and other user workflows. Design data models and flows with privacy, auditability, and regulatory considerations in mind. Integrate with internal and external APIs and third-party services used in our B2B stack. Experience with LLM/AI features in production (guardrails, logging, security considerations). Implement logging, monitor performance, and ship production-quality code. Datadog and Sentry ",
+      "tags": [
+        "admin",
+        "api",
+        "AWS",
+        "backend",
+        "cloud",
+        "docker",
+        "frontend",
+        "fullstack",
+        "javascript",
+        "react",
+        "security",
+        "UI/UX",
+        "AI/ML",
+        "automation",
+        "documentation"
+      ]
+    },
+    {
+      "id": "arbeitnow-what-ag-head-of-support-m-f-d-fully-remote",
+      "title": "Head of Support (m/f/d) – Fully Remote",
+      "company": "what. AG",
+      "category": "Non-profit, Social Impact & Sustainability",
+      "eligibility": [
+        "Mundo"
+      ],
+      "location": "Remote job",
+      "employment_type": null,
+      "source": "Arbeitnow",
+      "url": "https://www.arbeitnow.ch/jobs/companies/what-ag/head-of-support-fully-remote-zurich-271310",
+      "date_posted": 1795620690,
+      "date_found": "2026-11-26T00:55:36.318977+00:00",
+      "description": "Location: fully remote, work from anywhere About what. AG what. is a Zurich-based digital agency. We build websites, e-commerce and growth marketing for Swiss SMEs — and we’re pushing hard into AI-driven delivery, from our own Support Agent to our what. growth product. We’re a small, senior, remote team that likes to work smart and automate the repetitive parts. About the role Support has grown into one of our core services — service-agreement clients, our AI Support Agent, and on-demand project management. We’re looking for one person to own it end-to-end: the vision, the processes, the quality, the team and the commercials — and to push how far we can take AI in support. You turn a growing, multi-part operation into one well-led, measurable, continuously improving service. How we work You own your growth, and we give you the space to work on yourself. We deliver first-class support to our clients, from start to finish. We focus on real results, not just activity. And we’re AI-first: we automate the repetitive parts and use AI as a core tool every day, so the team can focus on judgement and quality. What you’ll do Own Support end-to-end — set the vision, priorities and best practi",
+      "tags": [
+        "Tech Team",
+        "Remote"
+      ]
+    }
+  ]
 }
