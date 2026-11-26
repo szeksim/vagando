@@ -173,7 +173,7 @@ def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publica
         print(f"[DESCARTADA: dados/remoto] {titulo}")
         return None
 
-elegibilidade = identificar_localizacao(
+    elegibilidade = identificar_localizacao(
         localidade + " " + descricao[:1200]
     )
     if not elegibilidade:
