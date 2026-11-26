@@ -10,18 +10,23 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "jobs.json"
 
 CATEGORIAS = {
-    "RH & Aquisição de Talentos": [
+    "HR & Talent Acquisition": [
         "talent acquisition", "recruiter", "recruiting", "people operations", "people ops",
         "human resources", " hr ", "people partner", "hrbp", "people experience",
         "recrutamento", "recrutador", "recursos humanos", "gestão de pessoas"
     ],
-    "Aprendizagem & Desenvolvimento": [
+    "Learning & Development": [
         "learning and development", "learning & development", "instructional design",
         "instructional designer", "learning experience", "enablement", "training", "lms",
         "talent development", "organizational development", "aprendizagem", "desenvolvimento",
         "treinamento", "designer instrucional", "educação corporativa"
     ],
-    "Terceiro Setor, Impacto Social & Sustentabilidade": [
+    "Quality Assurance": [
+        "quality assurance", "quality analyst", "quality specialist", "quality manager", "quality operations", "quality control", "quality management",
+        "qa analyst", "qa specialist", "qa manager", "quality monitoring", "quality improvement", "process quality", "service quality", "support quality",
+        "garantia da qualidade", "analista de qualidade", "monitoria de qualidade", "gestão da qualidade", "controle de qualidade", "melhoria contínua"
+    ],
+    "Non-profit, Social Impact & Sustainability": [
         "nonprofit", "non-profit", "non profit", "social impact", "humanitarian",
         "international development", "animal welfare", "animal rights", "animal advocacy",
         "animal protection", "wildlife", "conservation", "climate", "sustainability",
@@ -29,13 +34,12 @@ CATEGORIAS = {
         "direitos dos animais", "meio ambiente", "sustentabilidade", "conservação",
         "impacto social", "terceiro setor", "desenvolvimento internacional"
     ],
-    "Experiência do Cliente & Operações": [
+    "Customer Experience & Operations": [
         "customer experience", "customer success", "customer support", "customer education",
-        "quality assurance", "quality analyst", "knowledge management", "support operations",
-        "cx operations", "service operations", "experiência do cliente", "sucesso do cliente",
-        "suporte ao cliente", "garantia da qualidade"
+        "change management", "knowledge management", "support operations", "cx operations", "service operations",
+        "experiência do cliente", "sucesso do cliente", "suporte ao cliente"
     ],
-    "Projetos & Operações de Negócios": [
+    "1. Project & Business Operations": [
         "project manager", "program manager", "program management", "business operations",
         "business analyst", "operations manager", "strategy and operations", "ai operations",
         "project coordinator", "program operations", "gerente de projetos", "gestão de projetos",
