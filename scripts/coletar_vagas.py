@@ -14,7 +14,7 @@ CATEGORIAS = {
         "talent acquisition", "talent partner", "recruiter", "recruiting",
         "people operations", "people ops", "people partner",
         "people experience", "human resources", "hr manager",
-        "hr business partner", "hrbp",
+        "hr business partner", "hrbp", "recruitment",
         "recrutamento", "recrutador", "recursos humanos",
         "gestão de pessoas", "business partner de rh"
     ],
@@ -28,7 +28,10 @@ CATEGORIAS = {
         "corporate learning", "corporate training",
         "training manager", "training specialist",
         "trainer", "enablement",
-        "aprendizagem", "treinamento",
+        "customer enablement", "employee enablement",
+        "sales training", "learning consultant",
+        "learning experience designer", "curriculum development",
+        "learning operations", "aprendizagem", "treinamento",
         "designer instrucional", "educação corporativa",
         "desenvolvimento organizacional"
     ],
@@ -39,24 +42,31 @@ CATEGORIAS = {
         "quality management", "qa analyst", "qa specialist",
         "qa manager", "qa engineer", "quality monitoring",
         "quality improvement", "process quality", "service quality",
-        "support quality", "garantia da qualidade",
-        "analista de qualidade", "monitoria de qualidade",
-        "gestão da qualidade", "controle de qualidade",
-        "melhoria contínua"
+        "support quality", "quality auditor", "qa operations",
+        "quality coach", "quality lead", "quality assurance lead",
+        "garantia da qualidade", "analista de qualidade",
+        "monitoria de qualidade", "gestão da qualidade",
+        "controle de qualidade", "melhoria contínua"
     ],
 
     "Non-profit, Social Impact & Sustainability": [
-        "nonprofit", "non-profit", "non profit", "social impact",
-        "humanitarian", "international development",
-        "animal welfare", "animal rights", "animal advocacy",
-        "animal protection", "wildlife conservation",
-        "conservation", "climate action", "sustainability",
-        "environmental", "environment", "biodiversity",
-        "bem-estar animal", "proteção animal",
-        "direitos dos animais", "meio ambiente",
-        "sustentabilidade", "conservação",
-        "impacto social", "terceiro setor",
-        "desenvolvimento internacional"
+        "nonprofit", "non-profit", "nonprofit organization",
+        "nonprofit management", "social impact", "humanitarian",
+        "international development", "animal welfare",
+        "animal rights", "animal advocacy", "animal protection",
+        "animal shelter", "animal rescue", "animal care",
+        "wildlife", "wildlife protection", "wildlife conservation",
+        "conservation", "climate action", "climate change",
+        "sustainability", "environment", "environmental",
+        "environmental protection", "environmental conservation",
+        "biodiversity", "biodiversity conservation",
+        "bem-estar animal", "proteção animal", "direitos dos animais",
+        "resgate animal", "proteção da fauna",
+        "meio ambiente", "sustentabilidade",
+        "conservação", "conservação ambiental",
+        "mudanças climáticas", "impacto social",
+        "terceiro setor", "desenvolvimento internacional",
+        "organização sem fins lucrativos"
     ],
 
     "Customer Experience & Operations": [
@@ -76,7 +86,7 @@ CATEGORIAS = {
         "project management", "program management",
         "project coordinator", "program coordinator",
         "project operations", "program operations",
-        "business operations", "business analyst",
+        "business operations", "business operations manager",
         "strategy and operations", "project lead",
         "program lead", "portfolio manager", "pmo",
         "ai operations", "gerente de projetos",
@@ -85,6 +95,7 @@ CATEGORIAS = {
         "analista de negócios"
     ]
 }
+
 
 def buscar_json(url: str):
     req = urllib.request.Request(url, headers={"User-Agent": "VagandoRadar/0.1 (public job discovery)"})
