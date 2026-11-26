@@ -2,15 +2,13 @@
 
 **Vagando** é um radar de oportunidades profissionais remotas, pensado primeiro para pessoas residentes no Brasil e também aberto a oportunidades elegíveis para profissionais da América Latina e de qualquer lugar do mundo.
 
-O nome brinca com “vaga” e com a experiência de ficar vagando por vários job boards até encontrar uma oportunidade que realmente aceite candidatos no Brasil.
-
 ## Categorias do radar
 
-1. RH & Aquisição de Talentos
-2. Aprendizagem & Desenvolvimento (L&D)
-3. Terceiro Setor, Impacto Social & Sustentabilidade
-4. Experiência do Cliente & Operações
-5. Projetos & Operações de Negócios
+1. HR & Talent Acquisition
+2. Learning & Development
+3. Non-profit, Social Impact & Sustainability
+4. Customer Experience & Operations
+5. Project & Business Operations
 
 A categoria de impacto inclui oportunidades ligadas a direitos humanos, desenvolvimento internacional, bem-estar e proteção animal, conservação da vida silvestre, meio ambiente, clima e sustentabilidade.
 
