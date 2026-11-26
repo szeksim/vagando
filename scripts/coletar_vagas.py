@@ -11,39 +11,78 @@ OUT = ROOT / "data" / "jobs.json"
 
 CATEGORIAS = {
     "HR & Talent Acquisition": [
-        "talent acquisition", "recruiter", "recruiting", "people operations", "people ops",
-        "human resources", " hr ", "people partner", "hrbp", "people experience",
-        "recrutamento", "recrutador", "recursos humanos", "gestão de pessoas"
+        "talent acquisition", "talent partner", "recruiter", "recruiting",
+        "people operations", "people ops", "people partner",
+        "people experience", "human resources", "hr manager",
+        "hr business partner", "hrbp",
+        "recrutamento", "recrutador", "recursos humanos",
+        "gestão de pessoas", "business partner de rh"
     ],
+
     "Learning & Development": [
-        "learning and development", "learning & development", "instructional design",
-        "instructional designer", "learning experience", "enablement", "training", "lms",
-        "talent development", "organizational development", "aprendizagem", "desenvolvimento",
-        "treinamento", "designer instrucional", "educação corporativa"
+        "learning and development", "learning & development",
+        "instructional design", "instructional designer",
+        "learning experience", "learning specialist",
+        "learning manager", "learning enablement",
+        "talent development", "organizational development",
+        "corporate learning", "corporate training",
+        "training manager", "training specialist",
+        "trainer", "enablement",
+        "aprendizagem", "treinamento",
+        "designer instrucional", "educação corporativa",
+        "desenvolvimento organizacional"
     ],
+
     "Quality Assurance": [
-        "quality assurance", "quality analyst", "quality specialist", "quality manager", "quality operations", "quality control", "quality management",
-        "qa analyst", "qa specialist", "qa manager", "quality monitoring", "quality improvement", "process quality", "service quality", "support quality",
-        "garantia da qualidade", "analista de qualidade", "monitoria de qualidade", "gestão da qualidade", "controle de qualidade", "melhoria contínua"
+        "quality assurance", "quality analyst", "quality specialist",
+        "quality manager", "quality operations", "quality control",
+        "quality management", "qa analyst", "qa specialist",
+        "qa manager", "qa engineer", "quality monitoring",
+        "quality improvement", "process quality", "service quality",
+        "support quality", "garantia da qualidade",
+        "analista de qualidade", "monitoria de qualidade",
+        "gestão da qualidade", "controle de qualidade",
+        "melhoria contínua"
     ],
+
     "Non-profit, Social Impact & Sustainability": [
-        "nonprofit", "non-profit", "non profit", "social impact", "humanitarian",
-        "international development", "animal welfare", "animal rights", "animal advocacy",
-        "animal protection", "wildlife", "conservation", "climate", "sustainability",
-        "environment", "biodiversity", "environmental", "bem-estar animal", "proteção animal",
-        "direitos dos animais", "meio ambiente", "sustentabilidade", "conservação",
-        "impacto social", "terceiro setor", "desenvolvimento internacional"
+        "nonprofit", "non-profit", "non profit", "social impact",
+        "humanitarian", "international development",
+        "animal welfare", "animal rights", "animal advocacy",
+        "animal protection", "wildlife conservation",
+        "conservation", "climate action", "sustainability",
+        "environmental", "environment", "biodiversity",
+        "bem-estar animal", "proteção animal",
+        "direitos dos animais", "meio ambiente",
+        "sustentabilidade", "conservação",
+        "impacto social", "terceiro setor",
+        "desenvolvimento internacional"
     ],
+
     "Customer Experience & Operations": [
-        "customer experience", "customer success", "customer support", "customer education",
-        "change management", "knowledge management", "support operations", "cx operations", "service operations",
-        "experiência do cliente", "sucesso do cliente", "suporte ao cliente"
+        "customer experience", "customer success",
+        "customer support", "customer education",
+        "customer operations", "customer care",
+        "client success", "client experience",
+        "cx operations", "support operations",
+        "service operations", "knowledge management",
+        "experiência do cliente", "sucesso do cliente",
+        "suporte ao cliente", "atendimento ao cliente",
+        "operações de atendimento", "gestão de conhecimento"
     ],
-    "1. Project & Business Operations": [
-        "project manager", "program manager", "program management", "business operations",
-        "business analyst", "operations manager", "strategy and operations", "ai operations",
-        "project coordinator", "program operations", "gerente de projetos", "gestão de projetos",
-        "operações de negócios", "analista de negócios"
+
+    "Project & Business Operations": [
+        "project manager", "program manager",
+        "project management", "program management",
+        "project coordinator", "program coordinator",
+        "project operations", "program operations",
+        "business operations", "business analyst",
+        "strategy and operations", "project lead",
+        "program lead", "portfolio manager", "pmo",
+        "ai operations", "gerente de projetos",
+        "gestão de projetos", "coordenação de projetos",
+        "gestão de programas", "operações de negócios",
+        "analista de negócios"
     ]
 }
 
@@ -56,12 +95,40 @@ def limpar_html(valor: str) -> str:
     valor = re.sub(r"<[^>]+>", " ", valor or "")
     return re.sub(r"\s+", " ", unescape(valor)).strip()
 
+
 def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
-    texto = f" {titulo} {descricao} {' '.join(tags)} ".lower()
+    titulo = titulo.lower()
+    tags_texto = " ".join(tags).lower()
+
+    resultados = {}
+
     for categoria, palavras in CATEGORIAS.items():
-        if any(palavra in texto for palavra in palavras):
-            return categoria
-    return None
+        pontos_titulo = sum(
+            3 for palavra in palavras if palavra in titulo
+        )
+
+        pontos_tags = sum(
+            1 for palavra in palavras if palavra in tags_texto
+        )
+
+        resultados[categoria] = pontos_titulo + pontos_tags
+
+    maior_pontuacao = max(resultados.values(), default=0)
+
+    if maior_pontuacao < 3:
+        return None
+
+    melhores = [
+        categoria
+        for categoria, pontos in resultados.items()
+        if pontos == maior_pontuacao
+    ]
+
+    if len(melhores) != 1:
+        return None
+
+    return melhores[0]
+
 
 def identificar_elegibilidade(texto: str) -> list[str]:
     texto = (texto or "").lower()
