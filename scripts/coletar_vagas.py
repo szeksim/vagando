@@ -156,7 +156,7 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
 
     return melhores[0]
     
-def identificar_elegibilidade(texto: str) -> list[str]:
+def identificar_localizacao(texto: str) -> list[str]:
     texto = (texto or "").lower()
     elegibilidade = []
     if re.search(r"\b(brazil|brasil)\b", texto):
@@ -173,7 +173,7 @@ def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publica
         print(f"[DESCARTADA: dados/remoto] {titulo}")
         return None
 
-    elegibilidade = identificar_eligibilidade(
+elegibilidade = identificar_localizacao(
         localidade + " " + descricao[:1200]
     )
     if not elegibilidade:
