@@ -155,7 +155,8 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
         return None
 
     return melhores[0]
-
+    
+print("DEBUG: função de elegibilidade sendo definida")
 def identificar_elegibilidade(texto: str) -> list[str]:
     texto = (texto or "").lower()
     elegibilidade = []
@@ -166,6 +167,7 @@ def identificar_elegibilidade(texto: str) -> list[str]:
     if re.search(r"\b(worldwide|work from anywhere|anywhere in the world|global remote|globally)\b", texto):
         elegibilidade.append("Mundo")
     return elegibilidade
+print("DEBUG: função disponível:", callable(identificar_eligibilidade))
 
 def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publicado,
                tipo_contrato=None, remoto=True):
