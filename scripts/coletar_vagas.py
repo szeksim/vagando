@@ -171,23 +171,55 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
 
     return melhores[0]
     
-def identificar_localizacao(texto: str) -> list[str]:
-    texto = (texto or "").lower()
-    elegibilidade = []
+def identificar_localizacao(localidade: str, descricao: str = "") -> list[str]:
+    local = (localidade or "").lower()
+    texto = (descricao or "").lower()
 
-    if re.search(r"\b(brazil|brasil)\b", texto):
-        elegibilidade.append("Brasil")
+    # Disponibilidade mundial explicitamente declarada
+    if re.search(
+        r"\b(worldwide|work from anywhere|anywhere in the world|global remote|globally)\b",
+        texto
+    ):
+        return ["Mundo"]
 
-    if re.search(r"\b(latin america|latam|south america|central america)\b", texto):
-        elegibilidade.append("América Latina")
+    # Disponibilidade explícita para Brasil
+    if re.search(
+        r"\b(remote in brazil|based anywhere in brazil|brazil-based candidates|candidates in brazil|brazil|brasil)\b",
+        local
+    ):
+        return ["Brasil"]
 
-    if re.search(r"\b(worldwide|work from anywhere|anywhere in the world|global remote|globally)\b", texto):
-        elegibilidade.append("Mundo")
+    if re.search(
+        r"\b(remote in brazil|based anywhere in brazil|brazil-based candidates|candidates in brazil)\b",
+        texto
+    ):
+        return ["Brasil"]
 
-    if not elegibilidade:
-        elegibilidade.append("A confirmar")
+    # Disponibilidade explícita para América Latina
+    if re.search(
+        r"\b(latin america|latam|south america|central america)\b",
+        local
+    ):
+        return ["América Latina"]
 
-    return elegibilidade
+    if re.search(
+        r"\b(candidates in latin america|based in latin america|remote across latin america)\b",
+        texto
+    ):
+        return ["América Latina"]
+
+    # Localidades explicitamente restritas a outros países
+    paises_restritos = (
+        r"\b(usa|u\.s\.a\.?|united states|united kingdom|uk|"
+        r"germany|deutschland|france|canada|australia|"
+        r"netherlands|switzerland|ireland|spain|portugal)\b"
+    )
+
+    if re.search(paises_restritos, local):
+        return []
+
+    # Sem informação suficiente: manter para revisão
+    return ["A confirmar"]
 
 def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publicado,
                tipo_contrato=None, remoto=True):
@@ -196,7 +228,8 @@ def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publica
         return None
 
     elegibilidade = identificar_localizacao(
-        localidade + " " + descricao[:1200]
+        localidade,
+        descricao[:5000]
     )
     if not elegibilidade:
         print(f"[DESCARTADA: elegibilidade] {titulo} | Local: {localidade}")
