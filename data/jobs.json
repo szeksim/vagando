@@ -1,6 +1,95 @@
 {
-  "updated_at": "2026-11-27T01:41:45.939534+00:00",
-  "total": 0,
+  "updated_at": "2026-11-27T01:49:47.210545+00:00",
+  "total": 3,
   "source_errors": [],
-  "jobs": []
+  "jobs": [
+    {
+      "id": "remotive-lemon-io-senior-data-engineer",
+      "title": "Senior Data Engineer",
+      "company": "Lemon.io",
+      "category": "Project & Business Operations",
+      "eligibility": [
+        "América Latina"
+      ],
+      "location": "LATAM, Europe, USA, Canada, APAC",
+      "employment_type": "full_time",
+      "source": "Remotive",
+      "url": "https://remotive.com/remote-jobs/data/senior-data-engineer-2091137",
+      "date_posted": "2026-11-11T18:39:59",
+      "date_found": "2026-11-27T01:49:45.456976+00:00",
+      "description": "Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We’ve been doing this since 2015, and more than 1,500 companies have hired engineers through us. New roles for Senior React Full-stack Engineers come in all the time, and several are open right now. Two ways to work with clients Contract: most roles are contract-based. You join the client’s team and work as part of it. Direct hire: some clients hire engineers full-time, and we support you through the process. Because companies trust our vetting, applying through Lemon.io is often a shortcut. You get to the client faster than going through their full hiring process on your own. What you get Competitive rate, based on your seniority and skills We find the projects. No client hunting or rate negotiations. We match you manually based on your skills and preferences. Flexible schedule. Work async or with a small overlap with the team’s hours. No micromanagement, no screen trackers Direct work with clients, most of them with technical backgrounds Ongoing support from your application through every project, plus a community of engineers from 75+ countr",
+      "tags": [
+        ".Net",
+        "android",
+        "apache",
+        "AWS",
+        "azure",
+        "C",
+        "C#",
+        "C++",
+        "data science",
+        "fullstack",
+        "golang",
+        "ios",
+        "java",
+        "javascript",
+        "magento"
+      ]
+    },
+    {
+      "id": "remotive-lemon-io-senior-react-full-stack-developer",
+      "title": "Senior React Full-stack Developer",
+      "company": "Lemon.io",
+      "category": "Project & Business Operations",
+      "eligibility": [
+        "América Latina"
+      ],
+      "location": "LATAM, Europe, USA, Canada, APAC",
+      "employment_type": "full_time",
+      "source": "Remotive",
+      "url": "https://remotive.com/remote-jobs/software-development/senior-react-full-stack-developer-2091136",
+      "date_posted": "2026-11-10T14:25:05",
+      "date_found": "2026-11-27T01:49:45.459774+00:00",
+      "description": "Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We’ve been doing this since 2015, and more than 1,500 companies have hired engineers through us. New roles for Senior React Full-stack Engineers come in all the time, and several are open right now. Two ways to work with clients Contract: most roles are contract-based. You join the client’s team and work as part of it. Direct hire: some clients hire engineers full-time, and we support you through the process. Because companies trust our vetting, applying through Lemon.io is often a shortcut. You get to the client faster than going through their full hiring process on your own. What you get Competitive rate, based on your seniority and skills We find the projects. No client hunting or rate negotiations. We match you manually based on your skills and preferences. Flexible schedule. Work async or with a small overlap with the team’s hours. No micromanagement, no screen trackers Direct work with clients, most of them with technical backgrounds Ongoing support from your application through every project, plus a community of engineers from 75+ countr",
+      "tags": [
+        ".Net",
+        "android",
+        "AWS",
+        "azure",
+        "C",
+        "C#",
+        "C++",
+        "data science",
+        "fullstack",
+        "golang",
+        "ios",
+        "java",
+        "javascript",
+        "magento",
+        "node.js"
+      ]
+    },
+    {
+      "id": "himalayas-jdrel-t-cnico-de-suporte-sistema-dom-nio",
+      "title": "Técnico de Suporte Sistema Domínio",
+      "company": "JDREL",
+      "category": "Customer Experience & Operations",
+      "eligibility": [
+        "Brasil"
+      ],
+      "location": "Brazil",
+      "employment_type": "Full Time",
+      "source": "Himalayas",
+      "url": "https://himalayas.app/companies/jdrel/jobs/tecnico-de-suporte-sistema-dominio?utm_source=api",
+      "date_posted": 1795741184,
+      "date_found": "2026-11-27T01:49:46.598679+00:00",
+      "description": "Vem fazer parte da JDREL ! 🧡 Somos uma empresa que, há 20 anos, facilita a vida de pessoas e organizações, sendo uma revenda modelo dos produtos daThomson Reuters. Como Técnico de Suporte, você fará parte de um time que oferece a melhor experiência para nossos clientes do sistemaDomínio,se você é apaixonado por resolver problemas e garantir o sucesso dos clientes, essa é a oportunidade perfeita para você! Você irá atuar no atendimento ao cliente, trazendo soluções voltadas aos módulos: folha de pagamento e/ou escrita fiscal. Quer conhecer mais sobre a JDREL ? Assista aos vídeos no final desta página! 📽️ O seu dia a dia será: Oferecer suporte para os módulos de Escrita Fiscal/Contabilidade ou Folha de Pagamento no Sistema Domínio, por meio de atendimento telefônico; Assegurar que as informações fornecidas ao cliente sejam claras e objetivas; Garantir que o suporte prestado seja eficiente, buscando sempre a resolução dos problemas; Compreender a jornada do cliente e os processos necessários para atender a cada demanda apresentada; Atuar como intermediário nas solicitações de ajustes e correções nos produtos oferecidos; Praticar e incentivar os valores e comportamentos esperados pela ",
+      "tags": [
+        "Technical-Support-Specialist",
+        "Customer-Support-Specialist",
+        "Accounting-Software-Support",
+        "Payroll-Support-Specialist"
+      ]
+    }
+  ]
 }
