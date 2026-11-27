@@ -1,47 +1,6 @@
 {
-  "updated_at": "2026-11-26T10:45:13.148246+00:00",
-  "total": 2,
+  "updated_at": "2026-11-27T00:03:50.370563+00:00",
+  "total": 0,
   "source_errors": [],
-  "jobs": [
-    {
-      "id": "arbeitnow-digistore24-client-success-manager-100-remote-m-w-d",
-      "title": "Client Success Manager - 100% Remote (m/w/d)",
-      "company": "Digistore24",
-      "category": "Customer Experience & Operations",
-      "eligibility": [
-        "A confirmar"
-      ],
-      "location": "Hanover",
-      "employment_type": null,
-      "source": "Arbeitnow",
-      "url": "https://www.arbeitnow.com/jobs/companies/digistore24/client-success-manager-100-remote-hanover-16346",
-      "date_posted": 1795678251,
-      "date_found": "2026-11-26T10:45:13.072442+00:00",
-      "description": "Jobbeschreibung EINSTIEGSGEHALT: 40.000–55.000 € BRUTTO-JAHRESGEHALT (ABHÄNGIG VON BERUFSERFAHRUNG UND QUALIFIKATION) Du bist erfahren in der Kundenbetreuung und hast es drauf, langfristige Beziehungen aufzubauen? Du kannst dich in technische Probleme deiner Kunden reinfuchsen und es macht dich happy, für sie den Unterschied zu machen? Bei Digistore24 - einem der Top-IT-Unternehmen Deutschlands - kannst du in einem kollaborativen Remote-Arbeitsumfeld wachsen! Bitte beachte: Diese Position setzt fließende Deutsch- und Englischkenntnisse voraus. 👀 Du siehts die Stelle schon länger? Ja, das Team wächst stetig, wie unser Kundenstamm. Über Digistore24 Wir sind ein schnell wachsendes Technologieunternehmen und haben eine klare Vision : We shape the digital future . Unsere Mission ? Menschen weltweit dabei zu unterstützen, ihr Wissen online zu teilen und sich damit ein eigenes, erfolgreiches Business aufzubauen. Mit unserer Platform ermöglichen wir Millionen von Menschen den Zugang zu wertvollem Wissen und geben ihnen die Werkzeuge an die Hand, ihre Ziele wirklich zu erreichen. Was uns besonders macht :Wir sind rund 200 hochmotivierte Mitarbeitende, die nicht auf Anweisungen warten, sonde",
-      "tags": [
-        "Remote",
-        "Customer Service"
-      ]
-    },
-    {
-      "id": "arbeitnow-what-ag-head-of-support-m-f-d-fully-remote",
-      "title": "Head of Support (m/f/d) – Fully Remote",
-      "company": "what. AG",
-      "category": "Customer Experience & Operations",
-      "eligibility": [
-        "Mundo"
-      ],
-      "location": "Remote job",
-      "employment_type": null,
-      "source": "Arbeitnow",
-      "url": "https://www.arbeitnow.ch/jobs/companies/what-ag/head-of-support-fully-remote-zurich-271310",
-      "date_posted": 1795620690,
-      "date_found": "2026-11-26T10:45:13.134536+00:00",
-      "description": "Location: fully remote, work from anywhere About what. AG what. is a Zurich-based digital agency. We build websites, e-commerce and growth marketing for Swiss SMEs — and we’re pushing hard into AI-driven delivery, from our own Support Agent to our what. growth product. We’re a small, senior, remote team that likes to work smart and automate the repetitive parts. About the role Support has grown into one of our core services — service-agreement clients, our AI Support Agent, and on-demand project management. We’re looking for one person to own it end-to-end: the vision, the processes, the quality, the team and the commercials — and to push how far we can take AI in support. You turn a growing, multi-part operation into one well-led, measurable, continuously improving service. How we work You own your growth, and we give you the space to work on yourself. We deliver first-class support to our clients, from start to finish. We focus on real results, not just activity. And we’re AI-first: we automate the repetitive parts and use AI as a core tool every day, so the team can focus on judgement and quality. What you’ll do Own Support end-to-end — set the vision, priorities and best practi",
-      "tags": [
-        "Tech Team",
-        "Remote"
-      ]
-    }
-  ]
+  "jobs": []
 }
