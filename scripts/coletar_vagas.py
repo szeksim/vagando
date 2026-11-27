@@ -122,8 +122,6 @@ def limpar_html(valor: str) -> str:
     valor = re.sub(r"<[^>]+>", " ", valor or "")
     return re.sub(r"\s+", " ", unescape(valor)).strip()
 
-
-
 def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
     titulo = (titulo or "").lower().replace("-", " ").replace("_", " ")
     tags_texto = " ".join(tags or []).lower()
@@ -188,6 +186,10 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
     ]
 
     if len(melhores) != 1:
+        print(
+            f"[EMPATE DE CATEGORIA] {titulo} | "
+            f"Pontuações: {resultados}"
+        )
         return None
 
     return melhores[0]
