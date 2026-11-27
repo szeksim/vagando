@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   coletar:
-    runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
    steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
