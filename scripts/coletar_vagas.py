@@ -175,6 +175,10 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
             resultados[categoria] = pontuacao
 
     if not resultados:
+        print(
+            f"[SEM CATEGORIA] {titulo} | "
+            f"Tags: {tags}"
+        )
         return None
 
     maior_pontuacao = max(resultados.values())
