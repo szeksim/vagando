@@ -171,7 +171,7 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
 
     return melhores[0]
     
-def identificar_localizacao(localidade: str, descricao: str = "") -> list[str]:
+def identificar_localizacao(localidade: str, descricao: str = "", fonte: str = "") -> list[str]:
     local = (localidade or "").lower()
     texto = (descricao or "").lower()
 
@@ -186,10 +186,7 @@ def identificar_localizacao(localidade: str, descricao: str = "") -> list[str]:
     if re.search(
         r"\b(remote in brazil|based anywhere in brazil|brazil-based candidates|candidates in brazil|brazil|brasil)\b",
         local
-    ):
-        return ["Brasil"]
-
-    if re.search(
+    ) or re.search(
         r"\b(remote in brazil|based anywhere in brazil|brazil-based candidates|candidates in brazil)\b",
         texto
     ):
@@ -199,23 +196,38 @@ def identificar_localizacao(localidade: str, descricao: str = "") -> list[str]:
     if re.search(
         r"\b(latin america|latam|south america|central america)\b",
         local
-    ):
-        return ["América Latina"]
-
-    if re.search(
+    ) or re.search(
         r"\b(candidates in latin america|based in latin america|remote across latin america)\b",
         texto
     ):
         return ["América Latina"]
 
-    # Localidades explicitamente restritas a outros países
+    # Remotive: a localidade representa a elegibilidade exigida
     paises_restritos = (
         r"\b(usa|u\.s\.a\.?|united states|united kingdom|uk|"
         r"germany|deutschland|france|canada|australia|"
         r"netherlands|switzerland|ireland|spain|portugal)\b"
     )
 
-    if re.search(paises_restritos, local):
+    if fonte == "Remotive" and re.search(paises_restritos, local):
+        return []
+
+    # Arbeitnow: a localidade pode representar apenas a sede ou cidade.
+    # Procuramos restrições explícitas na descrição.
+    restricoes_explicitas = (
+        r"\b(only applicants? (?:based|located|residing) in|"
+        r"must be based in|must reside in|must live in|"
+        r"residents? of|based exclusively in|"
+        r"located exclusively in|remote within|"
+        r"remote only in|remote from|"
+        r"eligible to work in|authorized to work in|"
+        r"right to work in|work authorization in)\s+"
+        r"(?:the\s+)?(united states|usa|uk|united kingdom|"
+        r"germany|deutschland|france|canada|australia|"
+        r"netherlands|switzerland|ireland|spain|portugal)\b"
+    )
+
+    if re.search(restricoes_explicitas, texto):
         return []
 
     # Sem informação suficiente: manter para revisão
@@ -237,7 +249,8 @@ def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publica
 
     elegibilidade = identificar_localizacao(
         localidade,
-        descricao[:5000]
+        descricao[:5000],
+        fonte
     )
     if not elegibilidade:
         estatisticas["elegibilidade"] += 1
@@ -280,13 +293,6 @@ def coletar_arbeitnow():
     dados = buscar_json("https://www.arbeitnow.com/api/job-board-api")
     vagas = []
     for item in dados.get("data", []):
-        if item.get("remote", False):
-            print(
-                f"[DEBUG REMOTO TRUE] {item.get('title')} | "
-                f"location={item.get('location')} | "
-                f"tags={item.get('tags', [])}"
-                f"description={limpar_html(item.get('description', ''))[:1500]}"
-            )
         vaga = normalizar(
             "Arbeitnow", item.get("title", ""), item.get("company_name", ""), item.get("url", ""),
             item.get("location", ""), limpar_html(item.get("description", "")),
