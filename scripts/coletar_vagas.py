@@ -280,6 +280,13 @@ def coletar_arbeitnow():
     dados = buscar_json("https://www.arbeitnow.com/api/job-board-api")
     vagas = []
     for item in dados.get("data", []):
+        if not item.get("remote", False):
+            print(
+                f"[DEBUG ARBEITNOW] {item.get('title')} | "
+                f"remote={item.get('remote')} | "
+                f"location={item.get('location')} | "
+                f"description={limpar_html(item.get('description', ''))[:300]}"
+            )
         vaga = normalizar(
             "Arbeitnow", item.get("title", ""), item.get("company_name", ""), item.get("url", ""),
             item.get("location", ""), limpar_html(item.get("description", "")),
