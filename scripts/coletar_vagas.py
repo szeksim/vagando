@@ -275,28 +275,68 @@ def coletar_arbeitnow():
         if vaga: vagas.append(vaga)
     return vagas
 
+
 def main():
     coletadas, erros = [], []
-    for nome, coletor in [("Remotive", coletar_remotive), ("Arbeitnow", coletar_arbeitnow)]:
+
+    print("\n========== RELATÓRIO VAGANDO ==========\n")
+
+    for nome, coletor in [
+        ("Remotive", coletar_remotive),
+        ("Arbeitnow", coletar_arbeitnow)
+    ]:
         try:
-            coletadas.extend(coletor())
-            print(f"{nome}: coleta concluída")
+            vagas_fonte = coletor()
+            coletadas.extend(vagas_fonte)
+
+            print(
+                f"{nome}: {len(vagas_fonte)} vagas "
+                "passaram por todos os filtros."
+            )
+
         except Exception as erro:
-            erros.append(f"{nome}: {type(erro).__name__}: {erro}")
-            print(erros[-1])
+            erros.append(
+                f"{nome}: {type(erro).__name__}: {erro}"
+            )
+            print(f"ERRO - {erros[-1]}")
+
+    total_coletado = len(coletadas)
 
     unicas = {}
+
     for vaga in coletadas:
-        chave = (vaga["company"].lower(), vaga["title"].lower())
+        chave = (
+            vaga["company"].lower(),
+            vaga["title"].lower()
+        )
         unicas.setdefault(chave, vaga)
 
-    vagas = sorted(unicas.values(), key=lambda item: str(item.get("date_posted") or ""), reverse=True)
+    vagas = sorted(
+        unicas.values(),
+        key=lambda item: str(item.get("date_posted") or ""),
+        reverse=True
+    )
+
+    duplicadas = total_coletado - len(vagas)
+
     resultado = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "total": len(vagas), "source_errors": erros, "jobs": vagas
+        "total": len(vagas),
+        "source_errors": erros,
+        "jobs": vagas
     }
-    OUT.write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"{len(vagas)} oportunidades elegíveis salvas em {OUT}")
+
+    OUT.write_text(
+        json.dumps(resultado, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+    print("\n---------- RESUMO ----------")
+    print(f"Total aprovado pelas fontes: {total_coletado}")
+    print(f"Duplicidades removidas: {duplicadas}")
+    print(f"Total publicado: {len(vagas)}")
+    print(f"Erros encontrados: {len(erros)}")
+    print("============================\n")
 
 if __name__ == "__main__":
     main()
