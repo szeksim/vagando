@@ -20,6 +20,8 @@ jobs:
         with:
           python-version: "3.11"
       - name: Coletar e classificar oportunidades
+      env:
+          HIMALAYAS_API_KEY: ${{ secrets.HIMALAYAS_API_KEY }}
         run: python scripts/coletar_vagas.py
       - name: Salvar dados atualizados
         run: |
