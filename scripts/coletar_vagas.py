@@ -123,37 +123,58 @@ def limpar_html(valor: str) -> str:
     return re.sub(r"\s+", " ", unescape(valor)).strip()
 
 
+
 def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
-    titulo = (titulo or "").lower()
+    titulo = (titulo or "").lower().replace("-", " ").replace("_", " ")
     tags_texto = " ".join(tags or []).lower()
+    tags_texto = tags_texto.replace("-", " ").replace("_", " ")
 
     termos_genericos = {
         "enablement",
         "trainer",
-        "training"
+        "training",
+        "manager",
+        "specialist",
+        "analyst",
+        "director",
+        "lead",
+        "operations",
+        "coordinator",
+        "consultant"
     }
 
     resultados = {}
 
     for categoria, palavras in CATEGORIAS.items():
-        correspondencias = [
-            palavra for palavra in palavras
-            if palavra not in termos_genericos
-            and re.search(r"(?<!\w)" + re.escape(palavra) + r"(?!\w)", titulo)
+        termos = [
+            palavra.lower()
+            for palavra in palavras
+            if palavra.lower() not in termos_genericos
         ]
 
-        if not correspondencias:
-            continue
+        correspondencias_tags = {
+            palavra for palavra in termos
+            if re.search(
+                r"(?<!\w)" + re.escape(palavra) + r"(?!\w)",
+                tags_texto
+            )
+        }
 
-        pontos_titulo = len(correspondencias) * 3
+        correspondencias_titulo = {
+            palavra for palavra in termos
+            if re.search(
+                r"(?<!\w)" + re.escape(palavra) + r"(?!\w)",
+                titulo
+            )
+        }
 
-        pontos_tags = sum(
-            1 for palavra in palavras
-            if palavra not in termos_genericos
-            and re.search(r"(?<!\w)" + re.escape(palavra) + r"(?!\w)", tags_texto)
-        )
+        pontos_tags = len(correspondencias_tags) * 4
+        pontos_titulo = len(correspondencias_titulo) * 2
 
-        resultados[categoria] = pontos_titulo + pontos_tags
+        pontuacao = pontos_tags + pontos_titulo
+
+        if pontuacao > 0:
+            resultados[categoria] = pontuacao
 
     if not resultados:
         return None
