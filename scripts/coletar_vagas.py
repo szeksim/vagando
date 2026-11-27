@@ -436,11 +436,11 @@ def coletar_himalayas():
             
             data_publicacao = item.get("pubDate")
 
-                if data_publicacao:
-                    data_publicacao = datetime.fromtimestamp(
-                        int(data_publicacao),
-                        tz=timezone.utc
-                    ).isoformat()
+            if data_publicacao:
+                data_publicacao = datetime.fromtimestamp(
+                   int(data_publicacao),
+                   tz=timezone.utc
+               ).isoformat()
             
             vaga = normalizar(
                 "Himalayas",
