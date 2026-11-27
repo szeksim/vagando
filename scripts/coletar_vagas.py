@@ -108,7 +108,9 @@ CATEGORIAS = {
         "ai operations", "gerente de projetos",
         "gestão de projetos", "coordenação de projetos",
         "gestão de programas", "operações de negócios",
-        "analista de negócios"
+        "analista de negócios", "office assistant", "office administrator",
+        "administrative assistant", "administrative coordinator",
+        "virtual assistant", "executive assistant"
     ]
 }
 
