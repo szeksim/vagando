@@ -1,8 +1,30 @@
 {
-  "updated_at": "2026-11-27T14:47:21.799524+00:00",
+  "updated_at": "2026-11-27T15:05:18.743482+00:00",
   "total": 8,
   "source_errors": [],
   "jobs": [
+    {
+      "id": "himalayas-pocketfm-sketch-quality-control-reviewer",
+      "title": "Sketch Quality Control Reviewer",
+      "company": "PocketFM",
+      "category": "Quality Assurance",
+      "eligibility": [
+        "Brasil"
+      ],
+      "location": "Brazil",
+      "employment_type": "Contractor",
+      "source": "Himalayas",
+      "url": "https://himalayas.app/companies/pocketfm/jobs/sketch-quality-control-reviewer?utm_source=api",
+      "date_posted": "2026-11-27T11:28:15+00:00",
+      "date_found": "2026-11-27T15:05:18.546341+00:00",
+      "description": "The Sketch Quality Control Reviewer is responsible for ensuring the visual quality, consistency, and accuracy of sketch-based assets used in in-app videos, promotional content, and storytelling experiences. The role reviews sketches against approved scripts, briefs, and creative guidelines, identifies visual and continuity issues, provides clear and actionable feedback, and documents approval readiness before assets move to final production and integration. Key Responsibilities Review sketches used in in-app videos and promotional assets to ensure visual quality, clarity, and alignment with approved creative briefs and scripts. Assess visual consistency across episodes and assets, including character design, scene continuity, composition, proportions, and storytelling flow. Verify that sketches follow brand guidelines, content standards, and the approved visual direction. Identify and document visual inconsistencies, missing elements, continuity gaps, and deviations from the approved script or brief. Provide clear, specific, and actionable written feedback to support efficient revisions by artists and editors. Coordinate with Client representatives, sketch artists, and video editor",
+      "tags": [
+        "Quality-Control-Reviewer",
+        "Storyboard-Reviewer",
+        "Creative-Production-Reviewer",
+        "Quality-Control-Analyst"
+      ]
+    },
     {
       "id": "remotive-coalition-technologies-remote-office-assistant",
       "title": "Remote Office Assistant",
@@ -16,7 +38,7 @@
       "source": "Remotive",
       "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
       "date_posted": "2026-11-11T20:17:48",
-      "date_found": "2026-11-27T14:47:20.775064+00:00",
+      "date_found": "2026-11-27T15:05:17.412550+00:00",
       "description": "Coalition Technologies is seeking a reliable, detail-oriented, and highly organized Remote Office Assistant to support administrative, bookkeeping, billing, reporting, data entry, and internal operations tasks. This role is ideal for someone with strong communication skills, discretion, attention to detail, and a willingness to learn and grow within a fast-paced remote work environment. As an Office Assistant, you will help support daily administrative operations, assist with entry-level bookkeeping, organize client documents, support internal reporting, and help maintain accurate company records. This position offers strong growth potential for the right candidate, including opportunities for advancement within the Accounting team or other departments. We are looking for talented and diligent candidates who perform well on our skills assessments. Strong skills test performance may be considered even if a candidate does not meet every preferred experience or educational background requirement. Why Join Coalition Technologies? Coalition Technologies is committed to delivering high-quality work for our clients while providing our team with a fun, thriving, innovative, and growth-focu",
       "tags": [
         "CSS",
@@ -49,7 +71,7 @@
       "source": "Remotive",
       "url": "https://remotive.com/remote-jobs/data/senior-data-engineer-2091137",
       "date_posted": "2026-11-11T18:39:59",
-      "date_found": "2026-11-27T14:47:20.776934+00:00",
+      "date_found": "2026-11-27T15:05:17.414896+00:00",
       "description": "Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We’ve been doing this since 2015, and more than 1,500 companies have hired engineers through us. New roles for Senior React Full-stack Engineers come in all the time, and several are open right now. Two ways to work with clients Contract: most roles are contract-based. You join the client’s team and work as part of it. Direct hire: some clients hire engineers full-time, and we support you through the process. Because companies trust our vetting, applying through Lemon.io is often a shortcut. You get to the client faster than going through their full hiring process on your own. What you get Competitive rate, based on your seniority and skills We find the projects. No client hunting or rate negotiations. We match you manually based on your skills and preferences. Flexible schedule. Work async or with a small overlap with the team’s hours. No micromanagement, no screen trackers Direct work with clients, most of them with technical backgrounds Ongoing support from your application through every project, plus a community of engineers from 75+ countr",
       "tags": [
         ".Net",
@@ -82,7 +104,7 @@
       "source": "Remotive",
       "url": "https://remotive.com/remote-jobs/software-development/senior-react-full-stack-developer-2091136",
       "date_posted": "2026-11-10T14:25:05",
-      "date_found": "2026-11-27T14:47:20.779145+00:00",
+      "date_found": "2026-11-27T15:05:17.417576+00:00",
       "description": "Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We’ve been doing this since 2015, and more than 1,500 companies have hired engineers through us. New roles for Senior React Full-stack Engineers come in all the time, and several are open right now. Two ways to work with clients Contract: most roles are contract-based. You join the client’s team and work as part of it. Direct hire: some clients hire engineers full-time, and we support you through the process. Because companies trust our vetting, applying through Lemon.io is often a shortcut. You get to the client faster than going through their full hiring process on your own. What you get Competitive rate, based on your seniority and skills We find the projects. No client hunting or rate negotiations. We match you manually based on your skills and preferences. Flexible schedule. Work async or with a small overlap with the team’s hours. No micromanagement, no screen trackers Direct work with clients, most of them with technical backgrounds Ongoing support from your application through every project, plus a community of engineers from 75+ countr",
       "tags": [
         ".Net",
@@ -115,7 +137,7 @@
       "source": "Arbeitnow",
       "url": "https://www.arbeitnow.com/jobs/companies/sogema-software-gmbh/technische-r-informatikerin-als-it-projektleiterin-business-analystin-100-a-berlin-221716",
       "date_posted": 1795782650,
-      "date_found": "2026-11-27T14:47:20.891438+00:00",
+      "date_found": "2026-11-27T15:05:17.601729+00:00",
       "description": "Wir bauen weiter aus und dürfen gleich eine zweite neue Stelle schaffen! Du möchtest nicht nur Instandhaltungssysteme implementieren, sondern Instandhalter befähigen, das Beste aus ihren Instandhaltungsprozessen herauszuholen? Dich begeistert es, Kunden nicht nur technisch zu unterstützen, sondern sie langfristig in ihrem Erfolg zu begleiten? Du fühlst dich wohl an der Schnittstelle zwischen IT (Software-Entwicklung), Beratung und Schulung? Dann ist diese Rolle wie für dich gemacht. Sogema Software ist ein führender Schweizer Anbieter smarte Softwarelösungen im Bereich Facility- und Enterprise Asset Management. Wir verbinden Technik, Wirtschaft und IT zu ganzheitlichen, praxisnahen Lösungen für unsere Kunden in Industrie, öffentlichen Institutionen und Dienstleistungsunternehmen. Zur Verstärkung unseres Teams suchen wir eine/n InformatikerIn als IT Projektleiter / Business AnalystIn für Deutschland und eine/n in der Schweiz. Aufgaben Du begleitest unsere renommierten Kunden, online und vor Ort, bei der Instandhaltungsdigitalisierung (EAM/CAFM-Kunden-Projekte), unserer Instandhaltungssoftware CareOffice, von A-Z (Anforderungsanalyse, detaillierte Lösungsvorschläge und technisches Ko",
       "tags": [
         "Remote",
@@ -135,33 +157,11 @@
       "source": "Arbeitnow",
       "url": "https://www.arbeitnow.com/jobs/companies/sogema-software-gmbh/senior-data-migration-interface-engineer-dach-100-a-berlin-16751",
       "date_posted": 1795782650,
-      "date_found": "2026-11-27T14:47:20.893852+00:00",
+      "date_found": "2026-11-27T15:05:17.604647+00:00",
       "description": "Du möchtest nicht nur die Kunden kompetent bez. der Implementierung unserer Fachsoftware CareOffice beraten, sondern auch die entsprechenden Lösungskonzepte erstellen, umsetzen und diese implementieren? Deine Passion ist Kunden mit praxistauglichen Prozessen und der Parametrisierung von CareOffice zu beraten und diese in mittleren und grösseren Unternehmen einzuführen, wofür du gerne die Verantwortung übernimmst? Dann ist diese Rolle wie für dich gemacht. Sogema Software ist ein führender Schweizer Anbieter für smarte Softwarelösungen im Enterprise Asset, Facility-, und Immobilien Management. Wir verbinden Technik, Wirtschaft und IT zu ganzheitlichen, praxisnahen Lösungen für unsere Kunden in Industrie, öffentlichen Institutionen und Dienstleistungsunternehmen. Zur Verstärkung unseres Teams aufgrund des weiteren Wachstums, in der Schweiz oder Deutschland, suchen wir eine/n Senior Data Migration & Interface Engineer DACH 100% (a) Aufgaben Über die Rolle In dieser Position übernimmst du eine zentrale Rolle in Digitalisierungsprojekten entlang des gesamten Solution Lifecycles, von der Business Analyse über das Lösungskonzept bis hin zur technischen Implementierung, Integration, dem Be",
       "tags": [
         "Remote",
         "Project Management"
-      ]
-    },
-    {
-      "id": "himalayas-pocketfm-sketch-quality-control-reviewer",
-      "title": "Sketch Quality Control Reviewer",
-      "company": "PocketFM",
-      "category": "Quality Assurance",
-      "eligibility": [
-        "Brasil"
-      ],
-      "location": "Brazil",
-      "employment_type": "Contractor",
-      "source": "Himalayas",
-      "url": "https://himalayas.app/companies/pocketfm/jobs/sketch-quality-control-reviewer?utm_source=api",
-      "date_posted": 1795778895,
-      "date_found": "2026-11-27T14:47:21.668132+00:00",
-      "description": "The Sketch Quality Control Reviewer is responsible for ensuring the visual quality, consistency, and accuracy of sketch-based assets used in in-app videos, promotional content, and storytelling experiences. The role reviews sketches against approved scripts, briefs, and creative guidelines, identifies visual and continuity issues, provides clear and actionable feedback, and documents approval readiness before assets move to final production and integration. Key Responsibilities Review sketches used in in-app videos and promotional assets to ensure visual quality, clarity, and alignment with approved creative briefs and scripts. Assess visual consistency across episodes and assets, including character design, scene continuity, composition, proportions, and storytelling flow. Verify that sketches follow brand guidelines, content standards, and the approved visual direction. Identify and document visual inconsistencies, missing elements, continuity gaps, and deviations from the approved script or brief. Provide clear, specific, and actionable written feedback to support efficient revisions by artists and editors. Coordinate with Client representatives, sketch artists, and video editor",
-      "tags": [
-        "Quality-Control-Reviewer",
-        "Storyboard-Reviewer",
-        "Creative-Production-Reviewer",
-        "Quality-Control-Analyst"
       ]
     },
     {
@@ -177,7 +177,7 @@
       "source": "Arbeitnow",
       "url": "https://www.arbeitnow.com/jobs/companies/provipanda-gmbh/customer-success-manager-100-remote-berlin-354333",
       "date_posted": 1795775456,
-      "date_found": "2026-11-27T14:47:20.902141+00:00",
+      "date_found": "2026-11-27T15:05:17.613216+00:00",
       "description": "ProviPanda ist ein wachsendes HR-Tech-Startup und mittlerweile die größte Sales-Job-App im DACH-Raum. Mit einem Team aus 15 Mitarbeitenden arbeiten wir daran, den Sales-HR-Markt zu revolutionieren und neu zu denken. Als Customer Success Manager bist du die zentrale Anlaufstelle für unsere über 200 aktiven Kunden im Tagesgeschäft. Du sorgst dafür, dass sie zufrieden sind, langfristig bei uns bleiben und mit uns wachsen. Deine Aufgaben Du führst Onboardings und regelmäßige Check-ins durch und kennst deine Kunden wirklich Du hilfst bei allen Kundenproblemen, egal ob Support oder Success, und bleibst dran, bis sie gelöst sind Du bist erste Ansprechperson für alle Kundenthemen außerhalb von Sales Du übernimmst Eskalationen und behältst auch bei schwierigen Kunden einen kühlen Kopf Du entscheidest eigenständig bei Refunds, Kulanzfällen und Zahlungsthemen (Stripe) Du bindest Kunden langfristig und baust gemeinsam mit dem Sales-Team Accounts aus Du erkennst Upsell-Potenzial im Kundengespräch und gibst es gezielt weiter Das bringst du mit Du bist kundenorientiert, lösungsorientiert und übernimmst Verantwortung für die Probleme deiner Kunden Du hast eine hohe Stressresilienz und bleibst auch",
       "tags": [
         "Remote",
@@ -197,7 +197,7 @@
       "source": "Arbeitnow",
       "url": "https://www.arbeitnow.com/jobs/companies/scaleyo-hr-gmbh/recruiter-berlin-158674",
       "date_posted": 1795775456,
-      "date_found": "2026-11-27T14:47:20.903451+00:00",
+      "date_found": "2026-11-27T15:05:17.614201+00:00",
       "description": "Über uns Wir sind eine junge, wachsende Unternehmensberatung mit einem klaren Fokus: Wir unterstützen Organisationen dabei, ihre Personalarbeit zukunftsfähig zu gestalten. Vom Start-up bis zum Weltkonzern begleiten wir unsere Kunden rund um das Thema Talent Management – von der Personalgewinnung bis zur nachhaltigen Mitarbeiterbindung. Jetzt wollen wir auch unser eigenes Team weiterentwickeln und suchen zum nächstmöglichen Zeitpunkt einen engagierten Recruiter (m/w/d) in Teilzeit. Was dich bei uns erwartet Langfristige Karriereperspektiven auf Augenhöhe Faire, leistungsgerechte Vergütung Flexibles Arbeiten – 20-40-Stunden-Woche, frei einteilbar nach Absprache Mobiles Arbeiten / Home-Office möglich Enormer Gestaltungsspielraum und Eigenverantwortung Individuelles Karrierecoaching durch erfahrene HR-Profis Weiterentwicklung zum HR-Experten und Sinnstifter für unsere Kunden Modernes, wachstumsstarkes Start-up mit flachen Hierarchien und schnellen Entscheidungswegen Top-Technik & Tools für dein effizientes Arbeiten Exklusives Insider-Wissen & regelmäßige Fortbildungen Dein persönliches Karrierepaket wartet auf dich! Deine Aufgaben Du bist der Talent Manager für unsere Kunden Entwicklun",
       "tags": [
         "Remote",
