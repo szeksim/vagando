@@ -384,6 +384,8 @@ def coletar_himalayas():
             break
 
         resultados = dados.get("jobs", [])
+        if paginas == 0 and resultados:
+            print("[DATA DEBUG]", repr(resultados[0].get("pubDate")))
         if paginas == 0:
             for exemplo in resultados[:5]:
                 print(
