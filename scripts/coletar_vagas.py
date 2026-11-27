@@ -355,6 +355,14 @@ def coletar_himalayas():
             break
 
         resultados = dados.get("jobs", [])
+        if paginas == 0:
+            for exemplo in resultados[:5]:
+                print(
+                    "[HIMALAYAS DEBUG]",
+                    exemplo.get("title"),
+                    "| Localizações:", repr(exemplo.get("locationRestrictions")),
+                    "| Fusos:", repr(exemplo.get("timezoneRestrictions"))
+                )
 
         if not resultados:
             break
