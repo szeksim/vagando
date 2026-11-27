@@ -174,6 +174,10 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
 def identificar_localizacao(localidade: str, descricao: str = "", fonte: str = "") -> list[str]:
     local = (localidade or "").lower()
     texto = (descricao or "").lower()
+    
+    # Disponibilidade mundial informada na localidade
+    if re.search(r"\b(worldwide|global|anywhere)\b", local):
+        return ["Mundo"]
 
     # Disponibilidade mundial explicitamente declarada
     if re.search(
@@ -301,6 +305,53 @@ def coletar_arbeitnow():
         if vaga: vagas.append(vaga)
     return vagas
 
+def coletar_himalayas():
+    vagas = []
+    pagina = 1
+
+    while True:
+        url = (
+            "https://himalayas.app/jobs/api/search"
+            f"?country=BR&sort=recent&page={pagina}"
+        )
+
+        dados = buscar_json(url)
+        resultados = dados.get("jobs", [])
+
+        if not resultados:
+            break
+
+        for item in resultados:
+            restricoes = item.get("locationRestrictions") or []
+
+            if any(pais.lower() == "brazil" for pais in restricoes):
+                localidade = "Brazil"
+            else:
+                localidade = "Worldwide"
+
+            descricao = limpar_html(
+                item.get("description") or item.get("excerpt", "")
+            )
+
+            vaga = normalizar(
+                "Himalayas",
+                item.get("title", ""),
+                item.get("companyName", ""),
+                item.get("applicationLink", ""),
+                localidade,
+                descricao,
+                item.get("categories", []),
+                item.get("pubDate"),
+                item.get("employmentType"),
+                True
+            )
+
+            if vaga:
+                vagas.append(vaga)
+
+        pagina += 1
+
+    return vagas
 
 def main():
     coletadas, erros = [], []
@@ -309,7 +360,8 @@ def main():
 
     for nome, coletor in [
         ("Remotive", coletar_remotive),
-        ("Arbeitnow", coletar_arbeitnow)
+        ("Arbeitnow", coletar_arbeitnow),
+        ("Himalayas", coletar_himalayas)
     ]:
         try:
             vagas_fonte = coletor()
