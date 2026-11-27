@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Coleta oportunidades de APIs públicas e publica apenas vagas com sinal geográfico explícito."""
 from __future__ import annotations
-import json, re, urllib.request
+import json, re, os, urllib.request, urllib.error, urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 from html import unescape
@@ -305,29 +305,93 @@ def coletar_arbeitnow():
         if vaga: vagas.append(vaga)
     return vagas
 
+
 def coletar_himalayas():
     vagas = []
-    pagina = 1
+    cursor = None
+    paginas = 0
+    limite_paginas = 10
 
-    while True:
+    chave = os.environ.get("HIMALAYAS_API_KEY")
+
+    if not chave:
+        print("[Himalayas] Chave de API não encontrada.")
+        return vagas
+
+    while paginas < limite_paginas:
+        parametros = {"limit": 20}
+
+        if cursor:
+            parametros["cursor"] = cursor
+
         url = (
-            "https://himalayas.app/jobs/api/search"
-            f"?country=BR&sort=recent&page={pagina}"
+            "https://himalayas.app/jobs/api?"
+            + urllib.parse.urlencode(parametros)
         )
 
-        dados = buscar_json(url)
+        requisicao = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "VagandoRadar/0.1",
+                "Authorization": f"Bearer {chave}"
+            }
+        )
+
+        try:
+            with urllib.request.urlopen(requisicao, timeout=30) as resposta:
+                dados = json.loads(resposta.read().decode("utf-8"))
+
+        except urllib.error.HTTPError as erro:
+            print(
+                f"[Himalayas] Erro HTTP {erro.code} "
+                f"na página {paginas + 1}: {erro.reason}"
+            )
+            break
+
+        except Exception as erro:
+            print(
+                f"[Himalayas] Erro na página {paginas + 1}: {erro}"
+            )
+            break
+
         resultados = dados.get("jobs", [])
 
         if not resultados:
             break
 
-        for item in resultados:
-            restricoes = item.get("locationRestrictions") or []
+        paginas += 1
 
-            if any(pais.lower() == "brazil" for pais in restricoes):
-                localidade = "Brazil"
+        for item in resultados:
+            restricoes = item.get("locationRestrictions")
+            fusos = item.get("timezoneRestrictions")
+
+            # Sem os campos geográficos, não presumimos elegibilidade.
+            if restricoes is None or fusos is None:
+                localidade = "A confirmar"
+
             else:
-                localidade = "Worldwide"
+                restricoes = [pais.lower() for pais in restricoes]
+
+                # Fusos brasileiros: UTC-5, UTC-4, UTC-3 e UTC-2.
+                fusos_brasil = {-5, -4, -3, -2}
+
+                fuso_compativel = (
+                    not fusos
+                    or bool(set(fusos) & fusos_brasil)
+                )
+
+                brasil_permitido = (
+                    not restricoes
+                    or "brazil" in restricoes
+                )
+
+                if not brasil_permitido or not fuso_compativel:
+                    continue
+
+                if not restricoes and not fusos:
+                    localidade = "Worldwide"
+                else:
+                    localidade = "Brazil"
 
             descricao = limpar_html(
                 item.get("description") or item.get("excerpt", "")
@@ -349,7 +413,15 @@ def coletar_himalayas():
             if vaga:
                 vagas.append(vaga)
 
-        pagina += 1
+        cursor = dados.get("nextCursor")
+
+        if not cursor:
+            break
+
+    print(
+        f"[Himalayas] {paginas} páginas consultadas; "
+        f"{len(vagas)} vagas aprovadas."
+    )
 
     return vagas
 
