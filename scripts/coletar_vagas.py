@@ -476,8 +476,6 @@ def main():
     print("\n========== RELATÓRIO VAGANDO ==========\n")
 
     for nome, coletor in [
-        ("Remotive", coletar_remotive),
-        ("Arbeitnow", coletar_arbeitnow),
         ("Himalayas", coletar_himalayas)
     ]:
         try:
