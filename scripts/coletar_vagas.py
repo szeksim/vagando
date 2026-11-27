@@ -285,6 +285,7 @@ def coletar_arbeitnow():
                 f"[DEBUG REMOTO TRUE] {item.get('title')} | "
                 f"location={item.get('location')} | "
                 f"tags={item.get('tags', [])}"
+                f"description={limpar_html(item.get('description', ''))[:1500]}"
             )
         vaga = normalizar(
             "Arbeitnow", item.get("title", ""), item.get("company_name", ""), item.get("url", ""),
