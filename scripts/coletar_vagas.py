@@ -167,17 +167,6 @@ def classificar(titulo: str, descricao: str, tags: list[str]) -> str | None:
                 titulo
             )
         }
-
-        if (
-            categoria == "Project & Business Operations"
-            and ("data engineer" in titulo or "react" in titulo)
-        ):
-            print("\n========== DEBUG CLASSIFICAÇÃO ==========")
-            print("Título:", titulo)
-            print("Todas as tags recebidas:", repr(tags))
-            print("Palavras encontradas nas tags:", correspondencias_tags)
-            print("Palavras encontradas no título:", correspondencias_titulo)
-            print("=========================================\n")
         
         pontos_tags = len(correspondencias_tags) * 4
         pontos_titulo = len(correspondencias_titulo) * 2
