@@ -221,9 +221,17 @@ def identificar_localizacao(localidade: str, descricao: str = "") -> list[str]:
     # Sem informação suficiente: manter para revisão
     return ["A confirmar"]
 
+estatisticas = {
+    "dados_remoto": 0,
+    "elegibilidade": 0,
+    "categoria": 0,
+    "aprovadas": 0
+}
 def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publicado,
                tipo_contrato=None, remoto=True):
+
     if not titulo or not url or not remoto:
+        estatisticas["dados_remoto"] += 1
         print(f"[DESCARTADA: dados/remoto] {titulo}")
         return None
 
@@ -232,15 +240,20 @@ def normalizar(fonte, titulo, empresa, url, localidade, descricao, tags, publica
         descricao[:5000]
     )
     if not elegibilidade:
+        estatisticas["elegibilidade"] += 1
         print(f"[DESCARTADA: elegibilidade] {titulo} | Local: {localidade}")
         return None
 
     categoria = classificar(titulo, descricao, tags)
     if not categoria:
+        estatisticas["categoria"] += 1
         print(f"[DESCARTADA: categoria] {titulo} | Tags: {tags[:5]}")
         return None
 
+    estatisticas["aprovadas"] += 1
+
     identificador = re.sub(r"[^a-z0-9]+", "-", f"{fonte}-{empresa}-{titulo}".lower()).strip("-")[:120]
+
     return {
         "id": identificador, "title": titulo.strip(),
         "company": empresa.strip() or "Organização não informada",
@@ -332,6 +345,10 @@ def main():
     )
 
     print("\n---------- RESUMO ----------")
+    print(f"Descartadas por dados/remoto: {estatisticas['dados_remoto']}")
+    print(f"Descartadas por elegibilidade: {estatisticas['elegibilidade']}")
+    print(f"Descartadas por categoria: {estatisticas['categoria']}")
+    print(f"Aprovadas: {estatisticas['aprovadas']}")
     print(f"Total aprovado pelas fontes: {total_coletado}")
     print(f"Duplicidades removidas: {duplicadas}")
     print(f"Total publicado: {len(vagas)}")
